@@ -13,7 +13,7 @@ const initialState: AppState = {
 	locationfilter = "all",
 };
 
-const appSlice = createSlice({
+const itemslice = createSlice({
 	name: 'app',
 	initialState,
 	reducers: {
@@ -46,14 +46,18 @@ const appSlice = createSlice({
 			}
 		},
 
-		set: (state, action) => {
-			const id = action.payload;
-			state.itemlist = state.itemlist.filter ((item) => item.id !=== id);
+		settypefilter: (state, action) => {
+			state.typefilter = action.payload;
 		},
 
-		cancelarreserva: (state, action) => {
-			const id = action.payload;
-			state.itemlist = state.itemlist.filter ((item) => item.id !=== id);
+		setcapacityfilter: (state, action) => {
+			state.capacityfilter = action.payload;
+
+		},
+
+		setlocationfilter: (state, action) => {
+			state.locationfilter = action.payload;
+
 		},
 	},
 });
@@ -61,9 +65,14 @@ const appSlice = createSlice({
 
 
 
-export const {
+export const  {
 	cancelarreserva,
+	changeitemstatus,
+	Togglereservado,
+	settypefilter,
+	setcapacityfilter,
+	setlocationfilter
+} = itemslice.action ;
 
-} = itemSlice.action ;
-export default itemSlice.reducer;
+export default itemslice.reducer;
 

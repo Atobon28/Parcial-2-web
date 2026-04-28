@@ -1,5 +1,10 @@
 import type { RootState } from "@reduxjs/toolkit/query";
 import { useDispatch, UseDispatch, useSelector } from "react-redux";
+import {
+    cancelarreserva,
+	changeitemstatus,
+	Togglereservado,
+} from "../store/slices/appSlice"
 
 export const ItemCard = ({item} : any) => {
     const dispatch = useDispatch ();

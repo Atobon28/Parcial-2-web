@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import App from './App.tsx';
 import { AppContextProvider } from './context/AppContext.tsx';
 import './index.css';
-import { storeRedux } from './store/store.ts';
+import { store } from './store/store.ts';
 
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>
